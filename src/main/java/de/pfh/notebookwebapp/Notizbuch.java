@@ -1,24 +1,21 @@
 package de.pfh.notebookwebapp;
 
 import java.util.Date;
-import java.util.Vector;
 
 public class Notizbuch {
     private int notizbuchID;
     private String name;
 
     private Date erstellungsdatum = new Date();
-    private Vector<Integer> seitenID = new Vector<Integer>();
 
 
-    public Notizbuch(int notizbuchID, String name, Date erstellungsdatum, Vector<Integer> seitenID) {
+    public Notizbuch(int notizbuchID, String name, Date erstellungsdatum) {
         this.notizbuchID = notizbuchID;
         this.name = name;
         this.erstellungsdatum = erstellungsdatum;
-        this.seitenID = seitenID;
     }
 
-    public int getNotizbuchID() {
+    public int getNotizbuchID(int i) {
         return notizbuchID;
     }
 
@@ -26,7 +23,7 @@ public class Notizbuch {
         this.notizbuchID = notizbuchID;
     }
 
-    public String getName() {
+    public String getName(int i) {
         return name;
     }
 
@@ -42,11 +39,4 @@ public class Notizbuch {
         this.erstellungsdatum = erstellungsdatum;
     }
 
-    public Vector<Integer> getSeitenID() {
-        return seitenID;
-    }
-
-    public void setSeitenID(Vector<Integer> seitenID) {
-        this.seitenID = seitenID;
-    }
 }
